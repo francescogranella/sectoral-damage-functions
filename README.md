@@ -2,7 +2,7 @@
 
 **Authors:** Francesco Granella, Johannes Emmerling  
 **Affiliation:** RFF-CMCC European Institute on Economics and the Environment; Euro-Mediterranean Center on Climate Change  
-**Funding:** European Union's Horizon Europe research and innovation programme, grant agreement no. 101081369 (SPARCCLE)
+**Funding:** This project was funded by the European Union's Horizon Europe research and innovation programme, grant agreement no. 101081369 (SPARCCLE).
 
 ---
 
@@ -143,10 +143,6 @@ Repeat for each selected variable and sum contributions to obtain the total weat
 
 ## Citation
 
-If you use this material, please cite the associated paper and acknowledge funding from the SPARCCLE project (Horizon Europe grant agreement no. 101081369).
+Francesco Granella and Johannes Emmerling (In prep.) _Sectoral macroeconomic damage functions of weather extremes_.
 
 ---
-
-## License
-
-To be specified.
