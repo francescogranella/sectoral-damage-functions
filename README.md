@@ -8,7 +8,7 @@
 
 ## Overview
 
-This repository provides sectoral macroeconomic damage functions linking weather extremes to economic growth, along with country-level projections of weather extremes under five SSP-RCP scenarios from 2015 to 2100. The damage functions cover four outcomes — total gross regional product (GRP), agriculture, manufacturing, and services — and are estimated separately for Europe and for the global sample.
+This repository provides sectoral macroeconomic damage functions linking weather extremes to economic growth, along with country-level historical data and projections of weather extremes under five SSP-RCP scenarios from 2015 to 2100. The damage functions cover four outcomes — total gross regional product (GRP), agriculture, manufacturing, and services — and are estimated separately for Europe and for the global sample.
 
 ---
 
@@ -67,16 +67,11 @@ Empty cells indicate that the variable was not selected by the LASSO for that ou
 
 ---
 
-## Projection Data
+## Historical and Projection Data
 
-**File:** `weather_extremes_country_ssp_2015_2100.parquet`
+**File:** `weather_extremes_country_ssp_1950_2100.parquet`
 
-The file contains annual country-level projections of weather extremes, population-weighted using 2020 weights.
-
-- **Rows:** 110,510
-- **Countries:** 257 (ISO 3166-1 alpha-3 codes)
-- **Years:** 2015–2100
-- **Scenarios:** 5 SSP-RCP combinations (`ssp119`, `ssp126`, `ssp245`, `ssp370`, `ssp585`)
+The file contains annual country-level historical data and projections of weather extremes, population-weighted using 2020 weights.
 
 ### Columns
 
@@ -125,7 +120,8 @@ The file contains annual country-level projections of weather extremes, populati
 import pandas as pd
 
 # Load projection data
-df = pd.read_parquet("weather_extremes_country_ssp_2015_2100.parquet")
+df = pd.read_parquet("weather_extremes_country_ssp_1950_2100.parquet")
+df = df[df["year"] >= 2015]
 
 # Example: compute the change in TVAR relative to a baseline (2015)
 baseline = df[df["year"] == 2015].set_index(["iso3", "ssp"])["TVAR"]
